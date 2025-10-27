@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Recursive function to compute GCD
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b);
+}
+
+int main() {
+    int num1, num2;
+
+    // Taking user input
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    // Calling the recursive function and displaying the result
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+
+    return 0;
+}
